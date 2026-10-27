@@ -47,6 +47,15 @@ public class LinkedList {
         tail.next = null;
     }
 
+    public void traverse() {
+        Node temp = head;
+
+        while (temp != null) {
+            System.out.println(temp.data);
+            temp = temp.next;
+        }
+    }
+
     public int count() {
         Node temp = head;
         int size = 0;
