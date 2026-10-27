@@ -3,9 +3,10 @@ package main;
 public class LinkedList {
     public class Node {
         Node next;
-        int data;
+        Object data;
 
         Node() {
+            next = null;
         }
     }
 
