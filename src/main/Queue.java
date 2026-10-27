@@ -1,19 +1,38 @@
 package main;
 
 public class Queue {
+    Node front;
+    Node rear;
 
     public class Node {
         Node next;
-        int data;
+        Object data;
 
-        Node(int data) {
-            this.data = data;
+        Node() {
+            next = null;
         }
     }
 
-    Node head = null;
+    public void offer(Object data) {
+        Node newNode = new Node();
 
-    public void insertNode() {
-        Node =
+        if (front == null) {
+            front = rear = newNode;
+        } else {
+            rear.next = newNode;
+            rear = newNode;
+        }
+    }
+
+    public Object poll() {
+        if (front == null) {
+            return null;
+        }
+
+        Node temp = front;
+        front = front.next;
+        temp.next = null;
+
+        return temp.data;
     }
 }
