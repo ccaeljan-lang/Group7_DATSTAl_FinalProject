@@ -13,8 +13,11 @@ public class Queue {
         }
     }
 
-    public void enque(Object data) {
+    public void enqueue(Object data) {
         Node newNode = new Node();
+
+        // [PLACE HOLDER]: data assigning of newNode
+        // newNode.data = data;
 
         if (front == null) {
             front = rear = newNode;
@@ -24,7 +27,7 @@ public class Queue {
         }
     }
 
-    public Object deque() {
+    public Object dequeue() {
         if (front == null) {
             return null;
         }
@@ -34,5 +37,9 @@ public class Queue {
         temp.next = null;
 
         return temp.data;
+    }
+
+    public boolean isEmpty() {
+        return front == rear;
     }
 }
