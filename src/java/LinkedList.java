@@ -12,11 +12,10 @@ public class LinkedList {
 
     Node head = null;
 
-    public void insertNode() {
+    public void insertNode(Object data) {
         Node newHead = new Node();
 
-        // [PLACE HOLDER]: data assigning of head2
-        // newHead.data = data
+        newHead.data = data;
 
         if (head == null) {
             newHead.next = null;
