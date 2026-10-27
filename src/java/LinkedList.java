@@ -27,10 +27,17 @@ public class LinkedList {
     }
 
     public void deleteNode() {
-        Node tail = new Node();
-        Node temp = new Node();
+        if (head == null) {
+            return;
+        }
 
-        temp = head;
+        if (head.next == null) {
+            head = null;
+            return;
+        }
+
+        Node tail = null;
+        Node temp = head;
 
         while (temp.next != null) {
             tail = temp;
