@@ -13,18 +13,18 @@ public class LinkedList {
     Node head = null;
 
     public void insertNode() {
-        Node head2 = new Node();
+        Node newHead = new Node();
 
         // [PLACE HOLDER]: data assigning of head2
-        // head2.data = data
+        // newHead.data = data
 
         if (head == null) {
-            head2.next = null;
+            newHead.next = null;
         } else {
-            head2.next = head;
+            newHead.next = head;
         }
 
-        head = head2;
+        head = newHead;
     }
 
     public void deleteNode() {
@@ -39,5 +39,17 @@ public class LinkedList {
         }
 
         tail.next = null;
+    }
+
+    public int count() {
+        Node temp = head;
+        int size = 0;
+
+        while (temp != null) {
+            size++;
+            temp = temp.next;
+        }
+
+        return size;
     }
 }
