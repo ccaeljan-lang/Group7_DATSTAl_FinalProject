@@ -13,7 +13,7 @@ public class Queue {
         }
     }
 
-    public void offer(Object data) {
+    public void enque(Object data) {
         Node newNode = new Node();
 
         if (front == null) {
@@ -24,7 +24,7 @@ public class Queue {
         }
     }
 
-    public Object poll() {
+    public Object deque() {
         if (front == null) {
             return null;
         }
